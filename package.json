@@ -1,0 +1,11 @@
+{
+  "name": "nullstack-helpers",
+  "version": "0.5.0",
+  "description": "Helper functions and generators for Nullstack framework",
+  "main": "index.js",
+  "author": "GuiDevloper",
+  "license": "MIT",
+  "dependencies": {
+    "nullstack-types": "~0.5.0"
+  }
+}
