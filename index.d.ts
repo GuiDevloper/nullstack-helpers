@@ -14,48 +14,25 @@ export function createApp(params: {
   render?(context: Context, components: Object)
 })
 
-type ElementNode = {
-  type: String | Boolean,
-  attributes: {
-    route: String,
-    html: String
-  },
-  children: Array<any>
-};
-
-interface ContextNode extends Context {
-  node: ElementNode
-}
-
-export function createPlugin(params: {
-  /**
-   * Runs transformation to node element
-   * @param context Context with node attributes
-   */
-  transform?(context: ContextNode),
-  /**
-   * Load something when plugin installs
-   * @param context Application context
-   */
-  load?(context: Context),
-  /**
-   * Use plugin in server context
-   */
-  server?: Boolean,
-  /**
-   * Use plugin in client context
-   */
-  client?: Boolean
-}): Object
+/**
+ * Generates a plugin object
+ * @param params Plugin object
+ */
+export function createPlugin(params: ElementPlugin): ElementPlugin
 
 /**
  * Generates a function to match a specific node
  * @param fn Function testing the node
  */
-export function pluginMatch(fn: function (ElementNode)): (function(): Boolean)
+export function pluginMatch(
+  fn: (node: ElementNode) => any
+): (node: ElementNode) => Boolean
 
 /**
  * Generates a function to be used as class method
  * @param fn Pure class method
  */
-export function classFn(fn: function (Context)): (function(): any)
+export function classFn(
+  fn: (context: Context) => any,
+  ctx?: Context
+): (context?: any) => any
