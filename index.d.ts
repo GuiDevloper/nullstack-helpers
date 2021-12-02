@@ -11,7 +11,7 @@ export function createApp(params: {
     terminate?(context: Context)
     update?(context: Context)
   },
-  render?(context: Context, components: Object)
+  render?(context: Context, components: object)
 })
 
 /**
@@ -26,7 +26,7 @@ export function createPlugin(params: ElementPlugin): ElementPlugin
  */
 export function pluginMatch(
   fn: (node: ElementNode) => any
-): (node: ElementNode) => Boolean
+): (node: ElementNode) => boolean
 
 /**
  * Generates a function to be used as class method
