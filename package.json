@@ -3,6 +3,7 @@
   "version": "0.6.0",
   "description": "Helper functions and generators for Nullstack framework",
   "main": "index.js",
+  "types": "index.d.ts",
   "author": "GuiDevloper",
   "license": "MIT",
   "dependencies": {

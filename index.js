@@ -1,2 +1,3 @@
-export { createApp, classFn } from './App';
-export { createPlugin, pluginMatch } from './Plugin';
+const { createPlugin, pluginMatch } = require('./plugin');
+
+module.exports = { createPlugin, pluginMatch };
