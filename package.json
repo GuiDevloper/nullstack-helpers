@@ -7,6 +7,6 @@
   "author": "GuiDevloper",
   "license": "MIT",
   "dependencies": {
-    "nullstack-types": "~0.5.0"
+    "nullstack-types": "~0.15.0"
   }
 }
